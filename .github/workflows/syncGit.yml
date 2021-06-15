@@ -19,7 +19,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-
       - name: sync danwangshi-scripts
         uses: repo-sync/github-sync@v2
         if: env.PAT
@@ -28,4 +27,3 @@ jobs:
           source_branch: "JdScripts"
           destination_branch: "main"
           github_token: ${{ secrets.PAT }}
-      
